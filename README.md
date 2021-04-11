@@ -1,14 +1,4 @@
-1. game <- initial map
-2. game.start
-3. iteration(3 rules)
+# John Conway's Game of Life
+This is a simple python version of Game of Life on terminal
 
----
-Game:
-    1. init
-    2. start
-    3. stop
-    4. clear
-Config:
-    1. size of world
-    2. step time
-    3. initial state
+
