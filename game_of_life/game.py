@@ -1,7 +1,11 @@
 import numpy as np
 import json
 import time
+import os
 from collections import defaultdict
+
+directory = os.path.dirname(os.path.abspath(__file__))
+config_file = os.path.join(directory, "config.json")
 
 class Game():
     # game map symbols 
@@ -10,7 +14,7 @@ class Game():
     corner="+"
     
     def __init__(self):
-        with open("config.json") as f:
+        with open(config_file) as f:
             config = json.load(f)
         empty_world = np.zeros(config["world_size"])
         self.current_world = empty_world
