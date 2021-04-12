@@ -71,6 +71,7 @@ class Game():
         alives = np.where(world==1)
         alives = list(zip(alives[0], alives[1]))
         for point in alives:
+            alive_neighbors[point]+=0 # add current point into candidates
             neighbors = find_neighbors(point)
             for neighbor in neighbors:
                 if neighbor[0] < 0 or \
